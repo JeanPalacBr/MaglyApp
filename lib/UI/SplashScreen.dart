@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _cargaLogin() async {
-    var _duracion = Duration(seconds: 5);
+    var _duracion = Duration(seconds: 4);
     return Timer(_duracion, tologin);
   }
 

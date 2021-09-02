@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:string_validator/string_validator.dart';
 
+import 'home.dart';
+
 bool islogd = false;
 
 class Login extends StatelessWidget {
@@ -97,7 +99,8 @@ class Isloggedstate extends State {
                   child: Text("Iniciar sesión",
                       style: TextStyle(color: Colors.white)),
                   onPressed: () {
-                    if (isEmail(_email.value.text)) {
+                    //isEmail(_email.value.text)
+                    if (true) {
                       onpressedlogin(context, _email.value.text,
                           _password.value.text, true);
                     } else {
@@ -139,6 +142,7 @@ class Isloggedstate extends State {
   void onpressedlogin(
       var context, String email, String _password, bool remember) async {
     try {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
       //if (user != null) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: const Text('Bienvenido'),
